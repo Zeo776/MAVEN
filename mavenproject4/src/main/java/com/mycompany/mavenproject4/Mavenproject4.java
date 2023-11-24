@@ -5,14 +5,11 @@
 
 package com.mycompany.mavenproject4;
 
-import Controllers.EmpleadoJpaController;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.nio.file.Path;
 import java.sql.Statement;
 import java.sql.ResultSet;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 /**
  *
@@ -25,14 +22,14 @@ public class Mavenproject4 {
         System.out.println("Conectando....");
         
         String urlH2    = "jdbc:h2:" + Path.of("bbdd").toAbsolutePath().toString();
-        String urlMySQL = "jdbc:mysql://localhost:3306/pruebas?zeroDateTimeBehavior=CONVERT_TO_NULL";
+        String urlMySQL = "jdbc:mysql://localhost:3310/prueba?zeroDateTimeBehavior=CONVERT_TO_NULL";
         String user = "user";
         String pass = "root";
         
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("proj4_persistence"); 
+        /*EntityManagerFactory emf = Persistence.createEntityManagerFactory("proj4_persistence"); 
         EmpleadoJpaController emp = new EmpleadoJpaController(emf);
         
-        System.out.println( "Empleados : " + emp.getEmpleadoCount() );
+        System.out.println( "Empleados : " + emp.getEmpleadoCount() );*/
         
         // 0. Crear Connexion
         // Connection conn = H2Connector.newInstance(urlH2,user,pass);
